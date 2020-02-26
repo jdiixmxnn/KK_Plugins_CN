@@ -45,6 +45,9 @@ namespace KK_Plugins
         internal void Main()
         {
             Logger = base.Logger;
+
+            LangCNDic.Logger = Logger;
+
             Directory.CreateDirectory(ExportPath);
 
             UIScale = Config.Bind("Config", "UI Scale", 1.75f, new ConfigDescription("Controls the size of the window.", new AcceptableValueRange<float>(1f, 3f), new ConfigurationManagerAttributes { Order = 3 }));

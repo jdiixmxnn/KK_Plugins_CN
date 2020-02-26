@@ -62,29 +62,29 @@ namespace KK_Plugins
             var ButtonAllLocation = MakerConstants.Face.All;
 #endif
 
-            MakerAPI.AddAccessoryWindowControl(new MakerButton("Open Material Editor", null, this)).OnClick.AddListener(delegate { PopulateListAccessory(); });
-            e.AddControl(new MakerButton("Open Material Editor (Body)", ButtonAllLocation, this)).OnClick.AddListener(delegate { PopulateListBody(); });
-            e.AddControl(new MakerButton("Open Material Editor (Face)", ButtonAllLocation, this)).OnClick.AddListener(delegate { PopulateListFace(); });
-            e.AddControl(new MakerButton("Open Material Editor (All)", ButtonAllLocation, this)).OnClick.AddListener(delegate { PopulateListCharacter(); });
+            MakerAPI.AddAccessoryWindowControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), null, this)).OnClick.AddListener(delegate { PopulateListAccessory(); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Body)"), ButtonAllLocation, this)).OnClick.AddListener(delegate { PopulateListBody(); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Face)"), ButtonAllLocation, this)).OnClick.AddListener(delegate { PopulateListFace(); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (All)"), ButtonAllLocation, this)).OnClick.AddListener(delegate { PopulateListCharacter(); });
 
 #if !AI
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Clothes.Top, this)).OnClick.AddListener(delegate { PopulateListClothes(0); });
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Clothes.Bottom, this)).OnClick.AddListener(delegate { PopulateListClothes(1); });
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Clothes.Bra, this)).OnClick.AddListener(delegate { PopulateListClothes(2); });
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Clothes.Shorts, this)).OnClick.AddListener(delegate { PopulateListClothes(3); });
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Clothes.Gloves, this)).OnClick.AddListener(delegate { PopulateListClothes(4); });
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Clothes.Panst, this)).OnClick.AddListener(delegate { PopulateListClothes(5); });
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Clothes.Socks, this)).OnClick.AddListener(delegate { PopulateListClothes(6); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Clothes.Top, this)).OnClick.AddListener(delegate { PopulateListClothes(0); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Clothes.Bottom, this)).OnClick.AddListener(delegate { PopulateListClothes(1); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Clothes.Bra, this)).OnClick.AddListener(delegate { PopulateListClothes(2); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Clothes.Shorts, this)).OnClick.AddListener(delegate { PopulateListClothes(3); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Clothes.Gloves, this)).OnClick.AddListener(delegate { PopulateListClothes(4); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Clothes.Panst, this)).OnClick.AddListener(delegate { PopulateListClothes(5); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Clothes.Socks, this)).OnClick.AddListener(delegate { PopulateListClothes(6); });
 #if KK
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Clothes.InnerShoes, this)).OnClick.AddListener(delegate { PopulateListClothes(7); });
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Clothes.OuterShoes, this)).OnClick.AddListener(delegate { PopulateListClothes(8); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Clothes.InnerShoes, this)).OnClick.AddListener(delegate { PopulateListClothes(7); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Clothes.OuterShoes, this)).OnClick.AddListener(delegate { PopulateListClothes(8); });
 #else
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Clothes.Shoes, this)).OnClick.AddListener(delegate { PopulateListClothes(7); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Clothes.Shoes, this)).OnClick.AddListener(delegate { PopulateListClothes(7); });
 #endif
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Hair.Back, this)).OnClick.AddListener(delegate { PopulateListHair(0); });
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Hair.Front, this)).OnClick.AddListener(delegate { PopulateListHair(1); });
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Hair.Side, this)).OnClick.AddListener(delegate { PopulateListHair(2); });
-            e.AddControl(new MakerButton("Open Material Editor", MakerConstants.Hair.Extension, this)).OnClick.AddListener(delegate { PopulateListHair(3); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Hair.Back, this)).OnClick.AddListener(delegate { PopulateListHair(0); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Hair.Front, this)).OnClick.AddListener(delegate { PopulateListHair(1); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Hair.Side, this)).OnClick.AddListener(delegate { PopulateListHair(2); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor"), MakerConstants.Hair.Extension, this)).OnClick.AddListener(delegate { PopulateListHair(3); });
 #endif
         }
 
@@ -92,21 +92,21 @@ namespace KK_Plugins
         {
 #if AI
             MakerCategory hairCategory = new MakerCategory(MakerConstants.Hair.CategoryName, "ME", 0, "Material Editor");
-            e.AddControl(new MakerButton("Open Material Editor (Back)", hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(0); });
-            e.AddControl(new MakerButton("Open Material Editor (Front)", hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(1); });
-            e.AddControl(new MakerButton("Open Material Editor (Side)", hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(2); });
-            e.AddControl(new MakerButton("Open Material Editor (Extension)", hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(3); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Back)"), hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(0); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Front)"), hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(1); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Side)"), hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(2); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Extension)"), hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(3); });
             e.AddSubCategory(hairCategory);
 
             MakerCategory clothesCategory = new MakerCategory(MakerConstants.Clothes.CategoryName, "ME", 0, "Material Editor");
-            e.AddControl(new MakerButton("Open Material Editor (Top)", clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(0); });
-            e.AddControl(new MakerButton("Open Material Editor (Bottom)", clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(1); });
-            e.AddControl(new MakerButton("Open Material Editor (Bra)", clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(2); });
-            e.AddControl(new MakerButton("Open Material Editor (Underwear)", clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(3); });
-            e.AddControl(new MakerButton("Open Material Editor (Gloves)", clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(4); });
-            e.AddControl(new MakerButton("Open Material Editor (Pantyhose)", clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(5); });
-            e.AddControl(new MakerButton("Open Material Editor (Socks)", clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(6); });
-            e.AddControl(new MakerButton("Open Material Editor (Shoes)", clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(7); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Top)"), clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(0); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Bottom)"), clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(1); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Bra)"), clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(2); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Underwear)"), clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(3); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Gloves)"), clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(4); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Pantyhose)"), clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(5); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Socks)"), clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(6); });
+            e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Shoes)"), clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(7); });
             e.AddSubCategory(clothesCategory);
 #endif
         }
@@ -132,11 +132,11 @@ namespace KK_Plugins
             drag.color = Color.gray;
             UIUtility.MakeObjectDraggable(drag.rectTransform, MaterialEditorMainPanel.rectTransform);
 
-            var nametext = UIUtility.CreateText("Nametext", drag.transform, "Material Editor");
+            var nametext = UIUtility.CreateText("Nametext", drag.transform, LangCNDic.Trans2CN(LangCNDic.Trans2CN("Material Editor")));
             nametext.transform.SetRect(0f, 0f, 1f, 1f, 0f, 0f, 0f);
             nametext.alignment = TextAnchor.MiddleCenter;
 
-            var close = UIUtility.CreateButton("CloseButton", drag.transform, "");
+            var close = UIUtility.CreateButton("CloseButton", drag.transform, LangCNDic.Trans2CN(LangCNDic.Trans2CN("")));
             close.transform.SetRect(1f, 0f, 1f, 1f, -20f);
             close.onClick.AddListener(() => MaterialEditorWindow.gameObject.SetActive(false));
 
@@ -262,27 +262,27 @@ namespace KK_Plugins
                     contentListHeader.color = RowColor();
                     rowCounter++;
 
-                    var labelRenderer = UIUtility.CreateText(rend.NameFormatted(), contentListHeader.transform, "Renderer:");
+                    var labelRenderer = UIUtility.CreateText(rend.NameFormatted(), contentListHeader.transform, LangCNDic.Trans2CN("Renderer:"));
                     labelRenderer.alignment = TextAnchor.MiddleLeft;
                     labelRenderer.color = Color.black;
                     var labelRendererLE = labelRenderer.gameObject.AddComponent<LayoutElement>();
                     labelRendererLE.preferredWidth = labelWidth;
                     labelRendererLE.flexibleWidth = labelWidth;
 
-                    var labelRenderer2 = UIUtility.CreateText(rend.NameFormatted(), contentListHeader.transform, rend.NameFormatted());
+                    var labelRenderer2 = UIUtility.CreateText(rend.NameFormatted(), contentListHeader.transform, LangCNDic.Trans2CN(rend.NameFormatted()));
                     labelRenderer2.alignment = TextAnchor.MiddleRight;
                     labelRenderer2.color = Color.black;
                     var labelRenderer2LE = labelRenderer2.gameObject.AddComponent<LayoutElement>();
                     labelRenderer2LE.preferredWidth = 200;
                     labelRenderer2LE.flexibleWidth = 0;
 
-                    var exportUVButton = UIUtility.CreateButton("ExportUVButton", contentListHeader.transform, "Export UV Map");
+                    var exportUVButton = UIUtility.CreateButton("ExportUVButton", contentListHeader.transform, LangCNDic.Trans2CN("Export UV Map"));
                     exportUVButton.onClick.AddListener(() => { Export.ExportUVMaps(rend); });
                     var exportUVButtonLE = exportUVButton.gameObject.AddComponent<LayoutElement>();
                     exportUVButtonLE.preferredWidth = 110;
                     exportUVButtonLE.flexibleWidth = 0;
 
-                    var exportMeshButton = UIUtility.CreateButton("ExportUVButton", contentListHeader.transform, "Export .obj");
+                    var exportMeshButton = UIUtility.CreateButton("ExportUVButton", contentListHeader.transform, LangCNDic.Trans2CN(LangCNDic.Trans2CN("Export .obj")));
                     exportMeshButton.onClick.AddListener(() => { Export.ExportObj(rend); });
                     var exportMeshButtonLE = exportMeshButton.gameObject.AddComponent<LayoutElement>();
                     exportMeshButtonLE.preferredWidth = 85;
@@ -307,7 +307,7 @@ namespace KK_Plugins
                         valueEnabledInitial = GetCharaController(chaControl).GetRendererPropertyValueOriginal(objectType, coordinateIndex, slot, rend.NameFormatted(), RendererProperties.Enabled) == "1";
                     string EnabledLabelText() => valueEnabled == valueEnabledInitial ? "Enabled:" : "Enabled:*";
 
-                    var labelEnabled = UIUtility.CreateText("Enabled", contentItem1.transform, EnabledLabelText());
+                    var labelEnabled = UIUtility.CreateText("Enabled", contentItem1.transform, LangCNDic.Trans2CN(EnabledLabelText()));
                     labelEnabled.alignment = TextAnchor.MiddleLeft;
                     labelEnabled.color = Color.black;
                     var labelEnabledLE = labelEnabled.gameObject.AddComponent<LayoutElement>();
@@ -319,10 +319,10 @@ namespace KK_Plugins
                     dropdownEnabled.captionText.transform.SetRect(0f, 0f, 1f, 1f, 0f, 2f, -15f, -2f);
                     dropdownEnabled.captionText.alignment = TextAnchor.MiddleLeft;
                     dropdownEnabled.options.Clear();
-                    dropdownEnabled.options.Add(new Dropdown.OptionData("Off"));
-                    dropdownEnabled.options.Add(new Dropdown.OptionData("On"));
+                    dropdownEnabled.options.Add(new Dropdown.OptionData(LangCNDic.Trans2CN("Off")));
+                    dropdownEnabled.options.Add(new Dropdown.OptionData(LangCNDic.Trans2CN("On")));
                     dropdownEnabled.value = valueEnabled ? 1 : 0;
-                    dropdownEnabled.captionText.text = valueEnabled ? "On" : "Off";
+                    dropdownEnabled.captionText.text = LangCNDic.Trans2CN(valueEnabled ? "On" : "Off");
                     dropdownEnabled.onValueChanged.AddListener((value) =>
                     {
                         valueEnabled = value == 1;
@@ -332,13 +332,13 @@ namespace KK_Plugins
                         else
                             GetCharaController(chaControl).AddRendererProperty(objectType, coordinateIndex, slot, rend.NameFormatted(), RendererProperties.Enabled, value.ToString(), valueEnabledInitial ? "1" : "0");
                         SetRendererProperty(go, rend.NameFormatted(), RendererProperties.Enabled, value, objectType);
-                        labelEnabled.text = EnabledLabelText();
+                        labelEnabled.text = LangCNDic.Trans2CN(EnabledLabelText());
                     });
                     var dropdownEnabledLE = dropdownEnabled.gameObject.AddComponent<LayoutElement>();
                     dropdownEnabledLE.preferredWidth = dropdownWidth;
                     dropdownEnabledLE.flexibleWidth = 0;
 
-                    var resetEnabled = UIUtility.CreateButton("ResetEnabled", contentItem1.transform, "Reset");
+                    var resetEnabled = UIUtility.CreateButton("ResetEnabled", contentItem1.transform, LangCNDic.Trans2CN(LangCNDic.Trans2CN("Reset")));
                     resetEnabled.onClick.AddListener(() =>
                     {
                         if (objectType == ObjectType.Other) { }
@@ -349,7 +349,7 @@ namespace KK_Plugins
                         SetRendererProperty(go, rend.NameFormatted(), RendererProperties.Enabled, valueEnabledInitial ? 1 : 0, objectType);
                         valueEnabled = valueEnabledInitial;
                         dropdownEnabled.value = valueEnabledInitial ? 1 : 0;
-                        labelEnabled.text = EnabledLabelText();
+                        labelEnabled.text = LangCNDic.Trans2CN(EnabledLabelText());
                     });
                     var resetEnabledLE = resetEnabled.gameObject.AddComponent<LayoutElement>();
                     resetEnabledLE.preferredWidth = resetButtonWidth;
@@ -374,7 +374,7 @@ namespace KK_Plugins
                         valueShadowCastingModeInitial = (UnityEngine.Rendering.ShadowCastingMode)int.Parse(GetCharaController(chaControl).GetRendererPropertyValueOriginal(objectType, coordinateIndex, slot, rend.NameFormatted(), RendererProperties.ShadowCastingMode));
                     string ShadowCastingModeLabelText() => valueShadowCastingMode == valueShadowCastingModeInitial ? "ShadowCastingMode:" : "ShadowCastingMode:*";
 
-                    var labelShadowCastingMode = UIUtility.CreateText("ShadowCastingMode", contentItem2.transform, ShadowCastingModeLabelText());
+                    var labelShadowCastingMode = UIUtility.CreateText("ShadowCastingMode", contentItem2.transform, LangCNDic.Trans2CN(ShadowCastingModeLabelText()));
                     labelShadowCastingMode.alignment = TextAnchor.MiddleLeft;
                     labelShadowCastingMode.color = Color.black;
                     var labelShadowCastingModeLE = labelShadowCastingMode.gameObject.AddComponent<LayoutElement>();
@@ -386,10 +386,10 @@ namespace KK_Plugins
                     dropdownShadowCastingMode.captionText.transform.SetRect(0f, 0f, 1f, 1f, 0f, 2f, -15f, -2f);
                     dropdownShadowCastingMode.captionText.alignment = TextAnchor.MiddleLeft;
                     dropdownShadowCastingMode.options.Clear();
-                    dropdownShadowCastingMode.options.Add(new Dropdown.OptionData("Off"));
-                    dropdownShadowCastingMode.options.Add(new Dropdown.OptionData("On"));
-                    dropdownShadowCastingMode.options.Add(new Dropdown.OptionData("TwoSided"));
-                    dropdownShadowCastingMode.options.Add(new Dropdown.OptionData("ShadowsOnly"));
+                    dropdownShadowCastingMode.options.Add(new Dropdown.OptionData(LangCNDic.Trans2CN("Off")));
+                    dropdownShadowCastingMode.options.Add(new Dropdown.OptionData(LangCNDic.Trans2CN("On")));
+                    dropdownShadowCastingMode.options.Add(new Dropdown.OptionData(LangCNDic.Trans2CN("TwoSided")));
+                    dropdownShadowCastingMode.options.Add(new Dropdown.OptionData(LangCNDic.Trans2CN("ShadowsOnly")));
                     dropdownShadowCastingMode.value = (int)valueShadowCastingMode;
                     dropdownShadowCastingMode.captionText.text = valueShadowCastingMode.ToString();
                     dropdownShadowCastingMode.onValueChanged.AddListener((value) =>
@@ -401,13 +401,13 @@ namespace KK_Plugins
                         else
                             GetCharaController(chaControl).AddRendererProperty(objectType, coordinateIndex, slot, rend.NameFormatted(), RendererProperties.ShadowCastingMode, value.ToString(), ((int)valueShadowCastingModeInitial).ToString());
                         SetRendererProperty(go, rend.NameFormatted(), RendererProperties.ShadowCastingMode, value, objectType);
-                        labelShadowCastingMode.text = ShadowCastingModeLabelText();
+                        labelShadowCastingMode.text = LangCNDic.Trans2CN(ShadowCastingModeLabelText());
                     });
                     var dropdownShadowCastingModeLE = dropdownShadowCastingMode.gameObject.AddComponent<LayoutElement>();
                     dropdownShadowCastingModeLE.preferredWidth = dropdownWidth;
                     dropdownShadowCastingModeLE.flexibleWidth = 0;
 
-                    var resetShadowCastingMode = UIUtility.CreateButton("ResetShadowCastingMode", contentItem2.transform, "Reset");
+                    var resetShadowCastingMode = UIUtility.CreateButton("ResetShadowCastingMode", contentItem2.transform, LangCNDic.Trans2CN(LangCNDic.Trans2CN("Reset")));
                     resetShadowCastingMode.onClick.AddListener(() =>
                     {
                         if (objectType == ObjectType.Other) { }
@@ -418,7 +418,7 @@ namespace KK_Plugins
                         SetRendererProperty(go, rend.NameFormatted(), RendererProperties.ShadowCastingMode, (int)valueShadowCastingModeInitial, objectType);
                         valueShadowCastingMode = valueShadowCastingModeInitial;
                         dropdownShadowCastingMode.value = (int)valueShadowCastingModeInitial;
-                        labelShadowCastingMode.text = ShadowCastingModeLabelText();
+                        labelShadowCastingMode.text = LangCNDic.Trans2CN(ShadowCastingModeLabelText());
                     });
                     var resetShadowCastingModeLE = resetShadowCastingMode.gameObject.AddComponent<LayoutElement>();
                     resetShadowCastingModeLE.preferredWidth = resetButtonWidth;
@@ -443,7 +443,7 @@ namespace KK_Plugins
                         valueReceiveShadowsInitial = GetCharaController(chaControl).GetRendererPropertyValueOriginal(objectType, coordinateIndex, slot, rend.NameFormatted(), RendererProperties.ReceiveShadows) == "1";
                     string ReceiveShadowsLabelText() => valueReceiveShadows == valueReceiveShadowsInitial ? "ReceiveShadows:" : "ReceiveShadows:*";
 
-                    var labelReceiveShadows = UIUtility.CreateText("ReceiveShadows", contentItem3.transform, ReceiveShadowsLabelText());
+                    var labelReceiveShadows = UIUtility.CreateText("ReceiveShadows", contentItem3.transform, LangCNDic.Trans2CN(ReceiveShadowsLabelText()));
                     labelReceiveShadows.alignment = TextAnchor.MiddleLeft;
                     labelReceiveShadows.color = Color.black;
                     var labelReceiveShadowsLE = labelReceiveShadows.gameObject.AddComponent<LayoutElement>();
@@ -455,10 +455,10 @@ namespace KK_Plugins
                     dropdownReceiveShadows.captionText.transform.SetRect(0f, 0f, 1f, 1f, 0f, 2f, -15f, -2f);
                     dropdownReceiveShadows.captionText.alignment = TextAnchor.MiddleLeft;
                     dropdownReceiveShadows.options.Clear();
-                    dropdownReceiveShadows.options.Add(new Dropdown.OptionData("Off"));
-                    dropdownReceiveShadows.options.Add(new Dropdown.OptionData("On"));
+                    dropdownReceiveShadows.options.Add(new Dropdown.OptionData(LangCNDic.Trans2CN("Off")));
+                    dropdownReceiveShadows.options.Add(new Dropdown.OptionData(LangCNDic.Trans2CN("On")));
                     dropdownReceiveShadows.value = valueReceiveShadows ? 1 : 0;
-                    dropdownReceiveShadows.captionText.text = valueReceiveShadows ? "On" : "Off";
+                    dropdownReceiveShadows.captionText.text = LangCNDic.Trans2CN(valueReceiveShadows ? "On" : "Off");
                     dropdownReceiveShadows.onValueChanged.AddListener((value) =>
                     {
                         valueReceiveShadows = value == 1;
@@ -468,13 +468,13 @@ namespace KK_Plugins
                         else
                             GetCharaController(chaControl).AddRendererProperty(objectType, coordinateIndex, slot, rend.NameFormatted(), RendererProperties.ReceiveShadows, value.ToString(), valueReceiveShadowsInitial ? "1" : "0");
                         SetRendererProperty(go, rend.NameFormatted(), RendererProperties.ReceiveShadows, value, objectType);
-                        labelReceiveShadows.text = ReceiveShadowsLabelText();
+                        labelReceiveShadows.text = LangCNDic.Trans2CN(ReceiveShadowsLabelText());
                     });
                     var dropdownReceiveShadowsLE = dropdownReceiveShadows.gameObject.AddComponent<LayoutElement>();
                     dropdownReceiveShadowsLE.preferredWidth = dropdownWidth;
                     dropdownReceiveShadowsLE.flexibleWidth = 0;
 
-                    var resetReceiveShadows = UIUtility.CreateButton("ResetReceiveShadows", contentItem3.transform, "Reset");
+                    var resetReceiveShadows = UIUtility.CreateButton("ResetReceiveShadows", contentItem3.transform, LangCNDic.Trans2CN("Reset"));
                     resetReceiveShadows.onClick.AddListener(() =>
                     {
                         if (objectType == ObjectType.Other) { }
@@ -485,7 +485,7 @@ namespace KK_Plugins
                         SetRendererProperty(go, rend.NameFormatted(), RendererProperties.ReceiveShadows, valueReceiveShadowsInitial ? 1 : 0, objectType);
                         valueReceiveShadows = valueReceiveShadowsInitial;
                         dropdownReceiveShadows.value = valueReceiveShadowsInitial ? 1 : 0;
-                        labelReceiveShadows.text = ReceiveShadowsLabelText();
+                        labelReceiveShadows.text = LangCNDic.Trans2CN(ReceiveShadowsLabelText());
                     });
                     var resetReceiveShadowsLE = resetReceiveShadows.gameObject.AddComponent<LayoutElement>();
                     resetReceiveShadowsLE.preferredWidth = resetButtonWidth;
@@ -504,10 +504,10 @@ namespace KK_Plugins
                 contentListHeader1.color = RowColor();
                 rowCounter++;
 
-                var labelMat = UIUtility.CreateText(materialName, contentListHeader1.transform, "Material:");
+                var labelMat = UIUtility.CreateText(materialName, contentListHeader1.transform, LangCNDic.Trans2CN("Material:"));
                 labelMat.alignment = TextAnchor.MiddleLeft;
                 labelMat.color = Color.black;
-                var labelMat2 = UIUtility.CreateText(materialName, contentListHeader1.transform, materialName);
+                var labelMat2 = UIUtility.CreateText(materialName, contentListHeader1.transform, LangCNDic.Trans2CN(materialName));
                 labelMat2.alignment = TextAnchor.MiddleRight;
                 labelMat2.color = Color.black;
 
@@ -518,7 +518,7 @@ namespace KK_Plugins
                 contentListHeader2.color = RowColor();
                 rowCounter++;
 
-                var labelShader = UIUtility.CreateText(mat.shader.NameFormatted(), contentListHeader2.transform, "Shader:");
+                var labelShader = UIUtility.CreateText(mat.shader.NameFormatted(), contentListHeader2.transform, LangCNDic.Trans2CN("Shader:"));
                 labelShader.alignment = TextAnchor.MiddleLeft;
                 labelShader.color = Color.black;
                 var labelShaderLE = labelShader.gameObject.AddComponent<LayoutElement>();
@@ -527,7 +527,7 @@ namespace KK_Plugins
 
                 if (XMLShaderProperties.Count == 0)
                 {
-                    var labelShader2 = UIUtility.CreateText(mat.shader.NameFormatted(), contentListHeader2.transform, shaderName);
+                    var labelShader2 = UIUtility.CreateText(mat.shader.NameFormatted(), contentListHeader2.transform, LangCNDic.Trans2CN(shaderName));
                     labelShader2.alignment = TextAnchor.MiddleRight;
                     labelShader2.color = Color.black;
                 }
@@ -549,18 +549,18 @@ namespace KK_Plugins
                     }
                     string ShaderLabelText() => shaderName == shaderNameInitial ? "Shader:" : "Shader:*";
 
-                    labelShader.text = ShaderLabelText();
+                    labelShader.text = LangCNDic.Trans2CN(ShaderLabelText());
 
                     var dropdownShader = UIUtility.CreateDropdown("Shader", contentListHeader2.transform);
                     dropdownShader.transform.SetRect(0f, 0f, 0f, 1f, 0f, 0f, 100f);
                     dropdownShader.captionText.transform.SetRect(0f, 0f, 1f, 1f, 0f, 2f, -15f, -2f);
                     dropdownShader.captionText.alignment = TextAnchor.MiddleLeft;
                     dropdownShader.options.Clear();
-                    dropdownShader.options.Add(new Dropdown.OptionData(shaderNameInitial));
+                    dropdownShader.options.Add(new Dropdown.OptionData(LangCNDic.Trans2CN(LangCNDic.Trans2CN(shaderNameInitial))));
                     foreach (var shader in XMLShaderProperties.Where(x => x.Key != "default" && x.Key != shaderNameInitial))
-                        dropdownShader.options.Add(new Dropdown.OptionData(shader.Key));
+                        dropdownShader.options.Add(new Dropdown.OptionData(LangCNDic.Trans2CN(LangCNDic.Trans2CN(shader.Key))));
                     dropdownShader.value = ShaderSelectedIndex();
-                    dropdownShader.captionText.text = shaderName;
+                    dropdownShader.captionText.text = LangCNDic.Trans2CN(shaderName);
                     dropdownShader.onValueChanged.AddListener((value) =>
                     {
                         if (value == 0)
@@ -620,7 +620,7 @@ namespace KK_Plugins
                             }
                         }
 
-                        labelShader.text = ShaderLabelText();
+                        labelShader.text = LangCNDic.Trans2CN(ShaderLabelText());
                     });
                     var dropdownShaderLE = dropdownShader.gameObject.AddComponent<LayoutElement>();
                     dropdownShaderLE.preferredWidth = dropdownWidth * 3;
@@ -642,11 +642,11 @@ namespace KK_Plugins
                         return 0;
                     }
 
-                    var resetShader = UIUtility.CreateButton("ResetShader", contentListHeader2.transform, "Reset");
+                    var resetShader = UIUtility.CreateButton("ResetShader", contentListHeader2.transform, LangCNDic.Trans2CN("Reset"));
                     resetShader.onClick.AddListener(() =>
                     {
                         shaderName = shaderNameInitial;
-                        labelShader.text = ShaderLabelText();
+                        labelShader.text = LangCNDic.Trans2CN(ShaderLabelText());
 
                         if (objectType == ObjectType.Other) { }
                         else if (objectType == ObjectType.StudioItem)
@@ -693,7 +693,7 @@ namespace KK_Plugins
                     }
                     string RenderQueueLabelText() => renderQueue == renderQueueOriginal ? "RenderQueue:" : "RenderQueue:*";
 
-                    var labelShaderRenderQueue = UIUtility.CreateText("ShaderRenderQueue", contentListHeader3.transform, RenderQueueLabelText());
+                    var labelShaderRenderQueue = UIUtility.CreateText("ShaderRenderQueue", contentListHeader3.transform, LangCNDic.Trans2CN(RenderQueueLabelText()));
                     labelShaderRenderQueue.alignment = TextAnchor.MiddleLeft;
                     labelShaderRenderQueue.color = Color.black;
                     var labelShaderRenderQueueLE = labelShaderRenderQueue.gameObject.AddComponent<LayoutElement>();
@@ -722,13 +722,13 @@ namespace KK_Plugins
                         else
                             SetRenderQueue(go, materialName, renderQueue, objectType);
 
-                        labelShaderRenderQueue.text = RenderQueueLabelText();
+                        labelShaderRenderQueue.text = LangCNDic.Trans2CN(RenderQueueLabelText());
                     });
                     var textBoxShaderRenderQueueLE = textBoxShaderRenderQueue.gameObject.AddComponent<LayoutElement>();
                     textBoxShaderRenderQueueLE.preferredWidth = textBoxWidth;
                     textBoxShaderRenderQueueLE.flexibleWidth = 0;
 
-                    var resetShaderRenderQueue = UIUtility.CreateButton($"ResetRenderQueue", contentListHeader3.transform, "Reset");
+                    var resetShaderRenderQueue = UIUtility.CreateButton($"ResetRenderQueue", contentListHeader3.transform, LangCNDic.Trans2CN("Reset"));
                     resetShaderRenderQueue.onClick.AddListener(() =>
                     {
                         if (objectType == ObjectType.Other) { }
@@ -743,7 +743,7 @@ namespace KK_Plugins
                             SetRenderQueue(go, materialName, renderQueueOriginal, objectType);
                         renderQueue = renderQueueOriginal;
                         textBoxShaderRenderQueue.text = renderQueueOriginal.ToString();
-                        labelShaderRenderQueue.text = RenderQueueLabelText();
+                        labelShaderRenderQueue.text = LangCNDic.Trans2CN(RenderQueueLabelText());
                     });
                     var resetShaderRenderQueueLE = resetShaderRenderQueue.gameObject.AddComponent<LayoutElement>();
                     resetShaderRenderQueueLE.preferredWidth = resetButtonWidth;
@@ -784,14 +784,14 @@ namespace KK_Plugins
                             }
                             bool ColorDefault() => valueColor == valueColorInitial;
 
-                            var label = UIUtility.CreateText(propertyName, contentList.transform, LabelText(ColorDefault()));
+                            var label = UIUtility.CreateText(propertyName, contentList.transform, LangCNDic.Trans2CN(LabelText(ColorDefault())));
                             label.alignment = TextAnchor.MiddleLeft;
                             label.color = Color.black;
                             var labelLE = label.gameObject.AddComponent<LayoutElement>();
                             labelLE.preferredWidth = labelWidth;
                             labelLE.flexibleWidth = labelWidth;
 
-                            var labelR = UIUtility.CreateText("R", contentList.transform, "R");
+                            var labelR = UIUtility.CreateText("R", contentList.transform, LangCNDic.Trans2CN("R"));
                             labelR.alignment = TextAnchor.MiddleLeft;
                             labelR.color = Color.black;
                             var labelRLE = labelR.gameObject.AddComponent<LayoutElement>();
@@ -822,13 +822,13 @@ namespace KK_Plugins
                                 else
                                     SetColorProperty(go, materialName, propertyName, valueColor, objectType);
 
-                                label.text = LabelText(ColorDefault());
+                                label.text = LangCNDic.Trans2CN(LabelText(ColorDefault()));
                             });
                             var textBoxRLE = textBoxR.gameObject.AddComponent<LayoutElement>();
                             textBoxRLE.preferredWidth = textBoxWidth;
                             textBoxRLE.flexibleWidth = 0;
 
-                            var labelG = UIUtility.CreateText("G", contentList.transform, "G");
+                            var labelG = UIUtility.CreateText("G", contentList.transform, LangCNDic.Trans2CN("G"));
                             labelG.alignment = TextAnchor.MiddleLeft;
                             labelG.color = Color.black;
                             var labelGLE = labelG.gameObject.AddComponent<LayoutElement>();
@@ -859,13 +859,13 @@ namespace KK_Plugins
                                 else
                                     SetColorProperty(go, materialName, propertyName, valueColor, objectType);
 
-                                label.text = LabelText(ColorDefault());
+                                label.text = LangCNDic.Trans2CN(LabelText(ColorDefault()));
                             });
                             var textBoxGLE = textBoxG.gameObject.AddComponent<LayoutElement>();
                             textBoxGLE.preferredWidth = textBoxWidth;
                             textBoxGLE.flexibleWidth = 0;
 
-                            var labelB = UIUtility.CreateText("B", contentList.transform, "B");
+                            var labelB = UIUtility.CreateText("B", contentList.transform, LangCNDic.Trans2CN("B"));
                             labelB.alignment = TextAnchor.MiddleLeft;
                             labelB.color = Color.black;
                             var labelBLE = labelB.gameObject.AddComponent<LayoutElement>();
@@ -896,14 +896,14 @@ namespace KK_Plugins
                                 else
                                     SetColorProperty(go, materialName, propertyName, valueColor, objectType);
 
-                                label.text = LabelText(ColorDefault());
+                                label.text = LangCNDic.Trans2CN(LabelText(ColorDefault()));
                             });
 
                             var textBoxBLE = textBoxB.gameObject.AddComponent<LayoutElement>();
                             textBoxBLE.preferredWidth = textBoxWidth;
                             textBoxBLE.flexibleWidth = 0;
 
-                            var labelA = UIUtility.CreateText("A", contentList.transform, "A");
+                            var labelA = UIUtility.CreateText("A", contentList.transform, LangCNDic.Trans2CN("A"));
                             labelA.alignment = TextAnchor.MiddleLeft;
                             labelA.color = Color.black;
                             var labelALE = labelA.gameObject.AddComponent<LayoutElement>();
@@ -934,14 +934,14 @@ namespace KK_Plugins
                                 else
                                     SetColorProperty(go, materialName, propertyName, valueColor, objectType);
 
-                                label.text = LabelText(ColorDefault());
+                                label.text = LangCNDic.Trans2CN(LabelText(ColorDefault()));
                             });
 
                             var textBoxALE = textBoxA.gameObject.AddComponent<LayoutElement>();
                             textBoxALE.preferredWidth = textBoxWidth;
                             textBoxALE.flexibleWidth = 0;
 
-                            var resetColor = UIUtility.CreateButton($"Reset{propertyName}", contentList.transform, "Reset");
+                            var resetColor = UIUtility.CreateButton($"Reset{propertyName}", contentList.transform, LangCNDic.Trans2CN("Reset"));
                             resetColor.onClick.AddListener(() =>
                             {
                                 if (objectType == ObjectType.Other) { }
@@ -959,7 +959,7 @@ namespace KK_Plugins
                                 textBoxG.text = valueColorInitial.g.ToString();
                                 textBoxB.text = valueColorInitial.b.ToString();
                                 textBoxA.text = valueColorInitial.a.ToString();
-                                label.text = LabelText(true);
+                                label.text = LangCNDic.Trans2CN(LabelText(true));
                             });
                             var resetColorLE = resetColor.gameObject.AddComponent<LayoutElement>();
                             resetColorLE.preferredWidth = resetButtonWidth;
@@ -990,7 +990,7 @@ namespace KK_Plugins
                                     defaultValue = false;
                             }
 
-                            var label = UIUtility.CreateText(propertyName, contentList.transform, LabelText(defaultValue));
+                            var label = UIUtility.CreateText(propertyName, contentList.transform, LangCNDic.Trans2CN(LabelText(defaultValue)));
                             label.alignment = TextAnchor.MiddleLeft;
                             label.color = Color.black;
                             var labelLE = label.gameObject.AddComponent<LayoutElement>();
@@ -1001,7 +1001,7 @@ namespace KK_Plugins
 
                             if (texture == null)
                             {
-                                var labelNoTexture = UIUtility.CreateText($"NoTexture{propertyName}", contentList.transform, "No Texture");
+                                var labelNoTexture = UIUtility.CreateText($"NoTexture{propertyName}", contentList.transform, LangCNDic.Trans2CN("No Texture"));
                                 labelNoTexture.alignment = TextAnchor.MiddleCenter;
                                 labelNoTexture.color = Color.black;
                                 var labelNoTextureLE = labelNoTexture.gameObject.AddComponent<LayoutElement>();
@@ -1010,14 +1010,14 @@ namespace KK_Plugins
                             }
                             else
                             {
-                                var exportButton = UIUtility.CreateButton($"ExportTexture{propertyName}", contentList.transform, $"Export Texture");
+                                var exportButton = UIUtility.CreateButton($"ExportTexture{propertyName}", contentList.transform, LangCNDic.Trans2CN($"Export Texture"));
                                 exportButton.onClick.AddListener(() => ExportTexture(mat, propertyName));
                                 var exportButtonLE = exportButton.gameObject.AddComponent<LayoutElement>();
                                 exportButtonLE.preferredWidth = buttonWidth;
                                 exportButtonLE.flexibleWidth = 0;
                             }
 
-                            var importButton = UIUtility.CreateButton($"ImportTexture{propertyName}", contentList.transform, $"Import Texture");
+                            var importButton = UIUtility.CreateButton($"ImportTexture{propertyName}", contentList.transform, LangCNDic.Trans2CN($"Import Texture"));
                             importButton.onClick.AddListener(() =>
                             {
                                 if (objectType == ObjectType.Other) { }
@@ -1025,13 +1025,13 @@ namespace KK_Plugins
                                     GetSceneController().AddMaterialTextureProperty(id, materialName, propertyName, go);
                                 else
                                     GetCharaController(chaControl).AddMaterialTextureProperty(objectType, coordinateIndex, slot, materialName, propertyName, go);
-                                label.text = LabelText(false);
+                                label.text = LangCNDic.Trans2CN(LabelText(false));
                             });
                             var importButtonLE = importButton.gameObject.AddComponent<LayoutElement>();
                             importButtonLE.preferredWidth = buttonWidth;
                             importButtonLE.flexibleWidth = 0;
 
-                            var resetTexture = UIUtility.CreateButton($"Reset{propertyName}", contentList.transform, "Reset");
+                            var resetTexture = UIUtility.CreateButton($"Reset{propertyName}", contentList.transform, LangCNDic.Trans2CN("Reset"));
                             resetTexture.onClick.AddListener(() =>
                             {
                                 if (objectType == ObjectType.Other) { }
@@ -1039,7 +1039,7 @@ namespace KK_Plugins
                                     GetSceneController().RemoveMaterialTextureProperty(id, materialName, propertyName);
                                 else
                                     GetCharaController(chaControl).RemoveMaterialTextureProperty(objectType, coordinateIndex, slot, materialName, propertyName, TexturePropertyType.Texture);
-                                label.text = LabelText(true);
+                                label.text = LangCNDic.Trans2CN(LabelText(true));
                             });
                             var resetTextureLE = resetTexture.gameObject.AddComponent<LayoutElement>();
                             resetTextureLE.preferredWidth = resetButtonWidth;
@@ -1085,7 +1085,7 @@ namespace KK_Plugins
                             }
                             string labelOffsetScaleText() => (textureOffset == textureOffsetInitial && textureScale == textureScaleInitial) ? "" : "*";
 
-                            var label2 = UIUtility.CreateText(propertyName, contentList2.transform, labelOffsetScaleText());
+                            var label2 = UIUtility.CreateText(propertyName, contentList2.transform, LangCNDic.Trans2CN(labelOffsetScaleText()));
                             label2.alignment = TextAnchor.MiddleLeft;
                             label2.color = Color.black;
                             var label2LE = label2.gameObject.AddComponent<LayoutElement>();
@@ -1093,7 +1093,7 @@ namespace KK_Plugins
                             label2LE.flexibleWidth = labelWidth;
 
                             //Offset
-                            var labelOffsetX = UIUtility.CreateText("OffsetX", contentList2.transform, "Offset X");
+                            var labelOffsetX = UIUtility.CreateText("OffsetX", contentList2.transform, LangCNDic.Trans2CN("Offset X"));
                             labelOffsetX.alignment = TextAnchor.MiddleLeft;
                             labelOffsetX.color = Color.black;
                             var labelOffsetXLE = labelOffsetX.gameObject.AddComponent<LayoutElement>();
@@ -1123,13 +1123,13 @@ namespace KK_Plugins
                                 else
                                     SetTextureProperty(go, materialName, propertyName, TexturePropertyType.Offset, textureOffset, objectType);
 
-                                label2.text = labelOffsetScaleText();
+                                label2.text = LangCNDic.Trans2CN(labelOffsetScaleText());
                             });
                             var textBoxOffsetXLE = textBoxOffsetX.gameObject.AddComponent<LayoutElement>();
                             textBoxOffsetXLE.preferredWidth = textBoxXYWidth;
                             textBoxOffsetXLE.flexibleWidth = 0;
 
-                            var labelOffsetY = UIUtility.CreateText("OffsetY", contentList2.transform, "Y");
+                            var labelOffsetY = UIUtility.CreateText("OffsetY", contentList2.transform, LangCNDic.Trans2CN("Y"));
                             labelOffsetY.alignment = TextAnchor.MiddleLeft;
                             labelOffsetY.color = Color.black;
                             var labelOffsetYLE = labelOffsetY.gameObject.AddComponent<LayoutElement>();
@@ -1159,14 +1159,14 @@ namespace KK_Plugins
                                 else
                                     SetTextureProperty(go, materialName, propertyName, TexturePropertyType.Offset, textureOffset, objectType);
 
-                                label2.text = labelOffsetScaleText();
+                                label2.text = LangCNDic.Trans2CN(labelOffsetScaleText());
                             });
                             var textBoxOffsetYLE = textBoxOffsetY.gameObject.AddComponent<LayoutElement>();
                             textBoxOffsetYLE.preferredWidth = textBoxXYWidth;
                             textBoxOffsetYLE.flexibleWidth = 0;
 
                             //Scale
-                            var labelScaleX = UIUtility.CreateText("ScaleX", contentList2.transform, "Scale X");
+                            var labelScaleX = UIUtility.CreateText("ScaleX", contentList2.transform, LangCNDic.Trans2CN("Scale X"));
                             labelScaleX.alignment = TextAnchor.MiddleLeft;
                             labelScaleX.color = Color.black;
                             var labelScaleXLE = labelScaleX.gameObject.AddComponent<LayoutElement>();
@@ -1196,13 +1196,13 @@ namespace KK_Plugins
                                 else
                                     SetTextureProperty(go, materialName, propertyName, TexturePropertyType.Scale, textureScale, objectType);
 
-                                label2.text = labelOffsetScaleText();
+                                label2.text = LangCNDic.Trans2CN(labelOffsetScaleText());
                             });
                             var textBoxScaleXLE = textBoxScaleX.gameObject.AddComponent<LayoutElement>();
                             textBoxScaleXLE.preferredWidth = textBoxXYWidth;
                             textBoxScaleXLE.flexibleWidth = 0;
 
-                            var labelScaleY = UIUtility.CreateText("ScaleY", contentList2.transform, "Y");
+                            var labelScaleY = UIUtility.CreateText("ScaleY", contentList2.transform, LangCNDic.Trans2CN("Y"));
                             labelScaleY.alignment = TextAnchor.MiddleLeft;
                             labelScaleY.color = Color.black;
                             var labelScaleYLE = labelScaleY.gameObject.AddComponent<LayoutElement>();
@@ -1232,13 +1232,13 @@ namespace KK_Plugins
                                 else
                                     SetTextureProperty(go, materialName, propertyName, TexturePropertyType.Scale, textureScale, objectType);
 
-                                label2.text = labelOffsetScaleText();
+                                label2.text = LangCNDic.Trans2CN(labelOffsetScaleText());
                             });
                             var textBoxScaleYLE = textBoxScaleY.gameObject.AddComponent<LayoutElement>();
                             textBoxScaleYLE.preferredWidth = textBoxXYWidth;
                             textBoxScaleYLE.flexibleWidth = 0;
 
-                            var resetTextureOffsetScale = UIUtility.CreateButton($"Reset{propertyName}", contentList2.transform, "Reset");
+                            var resetTextureOffsetScale = UIUtility.CreateButton($"Reset{propertyName}", contentList2.transform, LangCNDic.Trans2CN("Reset"));
                             resetTextureOffsetScale.onClick.AddListener(() =>
                             {
                                 if (objectType == ObjectType.Other) { }
@@ -1270,7 +1270,7 @@ namespace KK_Plugins
                                 textBoxOffsetY.text = textureOffsetInitial.y.ToString();
                                 textBoxScaleX.text = textureScaleInitial.x.ToString();
                                 textBoxScaleY.text = textureScaleInitial.y.ToString();
-                                label2.text = labelOffsetScaleText();
+                                label2.text = LangCNDic.Trans2CN(labelOffsetScaleText());
                             });
                             var resetTextureOffsetScaleLE = resetTextureOffsetScale.gameObject.AddComponent<LayoutElement>();
                             resetTextureOffsetScaleLE.preferredWidth = resetButtonWidth;
@@ -1306,7 +1306,7 @@ namespace KK_Plugins
                             bool doSlider = property.Value.MinValue != null && property.Value.MaxValue != null;
                             bool FloatDefault() => valueFloat == valueFloatInitial;
 
-                            var label = UIUtility.CreateText(propertyName, contentList.transform, LabelText(FloatDefault()));
+                            var label = UIUtility.CreateText(propertyName, contentList.transform, LangCNDic.Trans2CN(LabelText(FloatDefault())));
                             label.alignment = TextAnchor.MiddleLeft;
                             label.color = Color.black;
                             var labelLE = label.gameObject.AddComponent<LayoutElement>();
@@ -1354,7 +1354,7 @@ namespace KK_Plugins
 
                                 if (doSlider && valueFloat <= sliderFloat.maxValue && valueFloat >= sliderFloat.minValue)
                                     sliderFloat.value = valueFloat;
-                                label.text = LabelText(FloatDefault());
+                                label.text = LangCNDic.Trans2CN(LabelText(FloatDefault()));
                             });
                             var textBoxFloatLE = textBoxFloat.gameObject.AddComponent<LayoutElement>();
                             textBoxFloatLE.preferredWidth = textBoxWidth;
@@ -1372,7 +1372,7 @@ namespace KK_Plugins
                                 });
                             }
 
-                            var resetFloat = UIUtility.CreateButton($"Reset{propertyName}", contentList.transform, "Reset");
+                            var resetFloat = UIUtility.CreateButton($"Reset{propertyName}", contentList.transform, LangCNDic.Trans2CN("Reset"));
                             resetFloat.onClick.AddListener(() =>
                             {
                                 if (objectType == ObjectType.Other) { }
@@ -1388,7 +1388,7 @@ namespace KK_Plugins
 
                                 valueFloat = valueFloatInitial;
                                 textBoxFloat.text = valueFloatInitial.ToString();
-                                label.text = LabelText(FloatDefault());
+                                label.text = LangCNDic.Trans2CN(LabelText(FloatDefault()));
                                 if (doSlider)
                                     sliderFloat.value = valueFloatInitial;
                             });

@@ -16,5 +16,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core.MaterialEditor.Export.UV.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core.MaterialEditor.Hooks.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core.MaterialEditor.UI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LangCNDic.cs" />
   </ItemGroup>
 </Project>

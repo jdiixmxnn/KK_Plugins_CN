@@ -126,6 +126,9 @@
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\default - 复制.xml" />
+  </ItemGroup>
   <Import Project="..\Core_MaterialEditor\Core_MaterialEditor.projitems" Label="Shared" />
   <Import Project="..\UIUtility\UIUtility.projitems" Label="Shared" />
   <Import Project="..\CommonCode\CommonCode.projitems" Label="Shared" />
