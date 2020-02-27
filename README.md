@@ -2,26 +2,26 @@ Support me on Patreon!<br/>
 https://www.patreon.com/DeathWeasel
 
 # KK_Plugins
-Plugins for Koikatsu, EmotionCreators, and AI Girl
+恋活、 EC、AI少女的插件集
 
-## Installation
-1. Install [BepInEx v5.0](https://github.com/BepInEx/BepInEx/releases)
-2. Install [BepisPlugins](https://github.com/bbepis/BepisPlugins/releases)
-3. Install [IllusionModdingAPI](https://github.com/IllusionMods/IllusionModdingAPI)
-4. Extract the plugin .zip file to your game folder
+## 安装
+1. 安装 [BepInEx v5.0](https://github.com/BepInEx/BepInEx/releases)
+2. 安装 [BepisPlugins](https://github.com/bbepis/BepisPlugins/releases)
+3. 安装 [IllusionModdingAPI](https://github.com/IllusionMods/IllusionModdingAPI)
+4. 解压.zip文件至游戏根目录
 
-#### CharaMakerLoadedSound
-**v1.0 - [Download](https://github.com/DeathWeasel1337/KK_Plugins/releases/download/v1/KK_CharaMakerLoadedSound.v1.0.zip)** - For Koikatsu<br/>
+#### 人物编辑加载提示音
+**v1.0 - [下载](https://github.com/DeathWeasel1337/KK_Plugins/releases/download/v1/KK_CharaMakerLoadedSound.v1.0.zip)** - 用于恋活<br/>
 
-Plays a sound when the Chara Maker finishes loading. Useful if you spend the load time alt-tabbed.
+在人物编辑器加载完成时播放提示音，用于长时间加载过程中切换到其他窗口后作为提醒。
 
-#### StudioSceneLoadedSound
-**v1.1 - [Download](https://www.patreon.com/posts/32459105)** - For Koikatsu and AI Girl<br/>
+#### 工作室场景加载提示音
+**v1.1 - [下载](https://www.patreon.com/posts/32459105)** - 用于恋活和AI少女<br/>
 
-Plays a sound when a Studio scene finishes loading or importing. Useful if you spend the load time for large scenes alt-tabbed.<br/>
+在工作室场景加载完成时播放提示音，用于长时间加载过程中切换到其他窗口后作为提醒。<br/>
 
-<details><summary>Change Log</summary>
-v1.1 Config options, AI version (thanks GeBo!)<br/>
+<details><summary>更新日志</summary>
+v1.1 设置选项, AI少女对应版本 (特别鸣谢GeBo)<br/>
 </details>
 
 #### ForceHighPoly
@@ -249,39 +249,40 @@ v1.1.1 Create card folders if missing to prevent errors<br/>
 
 Adds floor, breast, hand, and skirt colliders. Ported from Patchwork.<br/>
 
-#### MaterialEditor
-**v1.9.3 - [Download](https://www.patreon.com/posts/27881027)** - For Koikatsu, EmotionCreators, and AI Girl<br/>
+#### 材质编辑器
+**v1.9.3 - [下载](https://www.patreon.com/posts/27881027)** - 恋活，EC，AI少女均可用<br/>
 
-MaterialEditor is a plugin that allows you to edit many properties of objects that aren't usually accessible in game. Much like [Marco's clothing overlays](https://github.com/ManlyMarco/Koikatu-Overlay-Mods) you can replace the texture of an item, however with MaterialEditor you can edit much more than clothes. Edit clothes, accessories, hair, and even Studio items.
+材质编辑器可以让你调整游戏内无法直接访问的物件属性。与 [Marco's clothing overlays] 类似 (https://github.com/ManlyMarco/Koikatu-Overlay-Mods) 例如，你可以替换物件的贴图，当然，材质编辑器不仅仅可以编辑服装的属性，更包括饰品、头发，甚至是工作室内的物品。
 
-Features:
-* Export UV maps of a mesh to help with drawing textures
-* Replace nearly any texture with custom textures
-* Change properties of materials to control things like shininess or outline thickness
-* Change properties of the mesh to affect whether it casts shadows or disable a mesh completely
-* Change the shader of a material
-* All changes save and load with the card or Studio scene
-* Duplicate textures are saved to the card once. 100 accessories with the same texture have the same file size as one accessory with a texture
+特性：
+* 导出网格的UV贴图便于绘制贴图
+* 使用自定义纹理替换原有纹理
+* 更改材质属性以调整亮度、描线粗细等
+* 更改网格属性以配置阴影投射或彻底禁用网格
+* 更改材质的着色器
+* 配置会保存在人物卡与工作室场景存档中
+* 识别相同纹理，不会重复储存。假设人物拥有一百件使用相同纹理的饰品，人物卡的大小和只有一件饰品时相同。
 
-Access the Material Editor by pressing the "Open Material Editor" button on clothes, hair, or accessories in the character maker. Access it in Studio by pressing the "Mat. Editor" button on the Workspace with a studio item selected.
+在人物编辑器的身体、服装、头发、饰品设定中，点击“打开材质编辑器”按钮即可打开材质编辑器；
+在工作室的工作区中，通过选中物品然后点击"Mat. Editor"图标的按钮打开材质编辑器。
 
-<details><summary>Change Log</summary>
-v1.1 Fixed errors loading coordinates, errors loading scenes with multiple characters<br/>
-v1.2 Added the ability to change body and face materials<br/>
-v1.3 Copied studio items now copy Material Editor settings, changed filename format<br/>
-v1.3.1 Fixed error on importing studio objects with textures<br/>
-v1.4 Add ability to change shaders, change skin and face material<br/>
-v1.4.1 .jpg loading support, scroll speed increase, color and texture default values for custom shaders<br/>
-v1.5 Added main_skin shader, removed alpha_a and alpha_b properties for character skin<br/>
-v1.6 AI version<br/>
-v1.7 Add sliders<br/>
-v1.8 AI Studio support<br/>
-v1.9 Fixed data lost on changing clothing color and copying accessories, add texture offset and scale, add indicator mark for changed properties, add support for MainTex replacement<br/>
-v1.9.1 Fixed mipmaps not being generated, fixed error on object copy in Studio, added ability to resize the UI<br/>
-v1.9.2 Fixed an error on importing scenes<br/>
-v1.9.3 Added several missing properties<br/>
-v1.9.4 Added more shaders<br/>
-v1.9.4.1 Fixed a missing shader<br/>
+<details><summary>更新日志</summary>
+v1.1 修复多人物场景在加载时的错误<br/>
+v1.2 添加更改身体与脸部材质的选项<br/>
+v1.3 复制工作室中的物品同样也会复制该物品的“材质编辑器”属性<br/>
+v1.3.1 修复“导入附带材质的工作室物品”时出现的错误<br/>
+v1.4 添加更改着色器、更改皮肤与面部材质的选项<br/>
+v1.4.1 支持加载jpg文件，提高滚动速度，自定义着色器时颜色与纹理属性有默认值了<br/>
+v1.5 新增main_skin着色器，移除人物皮肤的alpha_a与alpha_b属性<br/>
+v1.6 AI少女版本迭代<br/>
+v1.7 新增滑动条<br/>
+v1.8 支持AI少女工作室<br/>
+v1.9 修复更换衣物与饰品时的数据丢失，新增贴图平移与放大，自定义后的属性会被标记为 “属性名:*”，新增替换主材质的选项<br/>
+v1.9.1 修复不生成Mip贴图的错误，修复工作室中复制物品时的错误，新增更改UI尺寸的设置<br/>
+v1.9.2 修复了一个导入场景时的错误<br/>
+v1.9.3 新增了几个之前遗漏的属性设置<br/>
+v1.9.4 新增了更多着色器<br/>
+v1.9.4.1 修复了一个之前遗漏的着色器设置<br/>
 </details>
 
 #### MaleJuice
