@@ -11,12 +11,12 @@ https://www.patreon.com/DeathWeasel
 4. 解压.zip文件至游戏根目录
 
 #### 人物编辑加载提示音
-**v1.0 - [下载](https://github.com/DeathWeasel1337/KK_Plugins/releases/download/v1/KK_CharaMakerLoadedSound.v1.0.zip)** - 用于恋活<br/>
+**v1.0 - [下载](https://github.com/DeathWeasel1337/KK_Plugins/releases/download/v1/KK_CharaMakerLoadedSound.v1.0.zip)** - 适用于恋活<br/>
 
 在人物编辑器加载完成时播放提示音，用于长时间加载过程中切换到其他窗口后作为提醒。
 
 #### 工作室场景加载提示音
-**v1.1 - [下载](https://www.patreon.com/posts/32459105)** - 用于恋活和AI少女<br/>
+**v1.1 - [下载](https://www.patreon.com/posts/32459105)** - 适用于恋活和AI少女<br/>
 
 在工作室场景加载完成时播放提示音，用于长时间加载过程中切换到其他窗口后作为提醒。<br/>
 
