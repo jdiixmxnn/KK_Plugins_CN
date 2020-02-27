@@ -91,14 +91,14 @@ namespace KK_Plugins
         private void MakerAPI_RegisterCustomSubCategories(object sender, RegisterSubCategoriesEvent e)
         {
 #if AI
-            MakerCategory hairCategory = new MakerCategory(MakerConstants.Hair.CategoryName, "ME", 0, "Material Editor");
+            MakerCategory hairCategory = new MakerCategory(MakerConstants.Hair.CategoryName, "ME", 0, LangCNDic.Trans2CN("Material Editor"));
             e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Back)"), hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(0); });
             e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Front)"), hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(1); });
             e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Side)"), hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(2); });
             e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Extension)"), hairCategory, this)).OnClick.AddListener(delegate { PopulateListHair(3); });
             e.AddSubCategory(hairCategory);
 
-            MakerCategory clothesCategory = new MakerCategory(MakerConstants.Clothes.CategoryName, "ME", 0, "Material Editor");
+            MakerCategory clothesCategory = new MakerCategory(MakerConstants.Clothes.CategoryName, "ME", 0, LangCNDic.Trans2CN("Material Editor"));
             e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Top)"), clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(0); });
             e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Bottom)"), clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(1); });
             e.AddControl(new MakerButton(LangCNDic.Trans2CN("Open Material Editor (Bra)"), clothesCategory, this)).OnClick.AddListener(delegate { PopulateListClothes(2); });

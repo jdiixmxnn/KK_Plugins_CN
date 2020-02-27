@@ -24,14 +24,14 @@ namespace KK_Plugins {
             {"material", "材质"},
             {"shader", "着色器"},
             {"reset", "重置"},
-            {"import texture", "导入贴图"},
-            {"export texture", "导出贴图"},
+            {"import texture", "导入纹理"},
+            {"export texture", "导出纹理"},
             {"shaderrenderqueue", "着色器渲染队列(ShaderRenderQueue)"},
             {"r", "R"},
             {"g", "G"},
             {"b", "B"},
             {"a", "A"},
-            {"no texture", "无贴图"},
+            {"no texture", "无纹理"},
             {"offset x", "X偏移(Offset X)"},
             {"y", "Y"},
             {"scale x", "X坐标(Scale X)"},
@@ -55,6 +55,10 @@ namespace KK_Plugins {
             {"open material editor (shoes)", "打开材质编辑器(鞋子)"},
             {"export uv map", "导出UV贴图映射(Export UV Map)"},
             {"export .obj", "导出.obj文件"},
+            {"ui scale", "UI放大"},
+            {"ui height", "UI高度"},
+            {"ui width", "UI宽度"},
+            {"config", "配置"},
 
             //Xml字典
             {"animationmask", "动画遮罩"},
@@ -76,11 +80,11 @@ namespace KK_Plugins {
             {"patternmask2", "图案遮罩2"},
             {"patternmask3", "图案遮罩3"},
             {"texcoord", "纹理坐标"},
-            {"texture1", "材质1"},
-            {"texture2", "材质2"},
-            {"texture3", "材质3"},
-            {"texture4", "材质4"},
-            {"texturesample0", "材质样本0"},
+            {"texture1", "纹理1"},
+            {"texture2", "纹理2"},
+            {"texture3", "纹理3"},
+            {"texture4", "纹理4"},
+            {"texturesample0", "纹理样本0"},
             {"clock", "时钟颜色"},
             {"color", "颜色"},
             {"color1_2", "颜色1_2"},
@@ -110,9 +114,9 @@ namespace KK_Plugins {
             {"paint1", "颜料1(paint1)"},
             {"refcolor", "颜色值(refcolor)"},
             {"shadowcolor", "阴影颜色"},
-            {"texture2uv", "贴图2UV"},
-            {"texture3uv", "贴图3UV"},
-            {"texture4uv", "贴图4UV"},
+            {"texture2uv", "纹理2UV"},
+            {"texture3uv", "纹理3UV"},
+            {"texture4uv", "纹理4UV"},
             {"_dirty", "脏度(_dirty)"},
             {"alpha", ""},
             {"alpha_a", ""},
@@ -148,11 +152,11 @@ namespace KK_Plugins {
             {"liquidftop", ""},
             {"metallic", "金属感"},
             {"mode", "模式"},
-            {"nip", "乳头"},
-            {"nipsize", "乳头大小"},
-            {"nip_specular", "乳头反光"},
+            {"nip", ""},
+            {"nipsize", "nip大小"},
+            {"nip_specular", "nip反光"},
             {"node_6948", "节点_6948"},
-            {"notusetexspecular", "不使用材质反光"},
+            {"notusetexspecular", "不使用纹理反光"},
             {"occlusionstrength", "吸收强度"},
             {"outline", ""},
             {"parallax", "视差"},
@@ -182,8 +186,8 @@ namespace KK_Plugins {
             {"specularpower", "镜面强度"},
             {"specularpowernail", "镜面强度Nail"},
             {"srcblend", ""},
-            {"tex1mask", "贴图1遮罩"},
-            {"texture4rotator", "贴图4旋转"},
+            {"tex1mask", "纹理1遮罩"},
+            {"texture4rotator", "纹理4旋转"},
             {"translucency", "透明度"},
             {"transnormaldistortion", "一般透明扭曲"},
             {"transscattering", "透明碎片化"},
@@ -257,13 +261,13 @@ namespace KK_Plugins {
             {"detailmainscale", "主要细节强度"},
             {"bumpscale2", "凹凸强度2"},
             {"riality", ""},
-            {"nipgloss", "乳头光泽"},
+            {"nipgloss", "nip光泽"},
             {"nailgloss", "指甲光泽"},
             {"nipscale", ""},
-            {"texture3rotator", "贴图3旋转"},
-            {"texture4scale", "贴图4强度"},
+            {"texture3rotator", "纹理3旋转"},
+            {"texture4scale", "纹理4强度"},
             {"color13", "颜色13"},
-            {"matcaptexture", "Matcap贴图"},
+            {"matcaptexture", "Matcap纹理"},
             {"hairbase", "头发基底(HairBase)"},
             {"bumpmap2", "凹凸贴图2"},
             {"texcoord2", "纹理坐标2"},
@@ -293,18 +297,18 @@ namespace KK_Plugins {
         {
             if (s.IsNullOrEmpty()) return "";
 
-            Logger.LogInfo($"[{MaterialEditor.PluginNameInternal}]尝试翻译\"{s}\"");
+            //Logger.LogInfo($"[{MaterialEditor.PluginNameInternal}]尝试翻译\"{s}\"");
             int pos = s.IndexOf(':');
 
             if (pos == -1) pos = s.Length;
             string _s = s.Substring(0, pos);
 
             if (En2CnDic.ContainsKey(_s.ToLower()) && En2CnDic[_s.ToLower()].Length > 0) {
-                Logger.LogInfo($"[{MaterialEditor.PluginNameInternal}]找到片段\"{_s}\"的对应翻译\"{En2CnDic[_s.ToLower()]}\"");
+                //Logger.LogInfo($"[{MaterialEditor.PluginNameInternal}]找到片段\"{_s}\"的对应翻译\"{En2CnDic[_s.ToLower()]}\"");
                 return En2CnDic[_s.ToLower()] + s.Substring(pos);
             }
             else {
-                Logger.LogInfo($"[{MaterialEditor.PluginNameInternal}]未找到片段\"{_s}\"的对应翻译" );
+                //Logger.LogInfo($"[{MaterialEditor.PluginNameInternal}]未找到片段\"{_s}\"的对应翻译" );
                 return s;
             }
         }
