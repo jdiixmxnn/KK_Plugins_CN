@@ -29,7 +29,7 @@ namespace KK_Plugins
     public partial class MaterialEditor
     {
         public const string GUID = "com.deathweasel.bepinex.materialeditor";
-        public const string PluginName = "Material Editor";
+        public const string PluginName = "Material Editor 汉化版";
         public const string Version = "1.9.4.1";
         internal static new ManualLogSource Logger;
 
