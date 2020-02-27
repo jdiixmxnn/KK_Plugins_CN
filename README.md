@@ -1,4 +1,4 @@
-Support me on Patreon!<br/>
+原作者Patreon赞助链接<br/>
 https://www.patreon.com/DeathWeasel
 
 # KK_Plugins
